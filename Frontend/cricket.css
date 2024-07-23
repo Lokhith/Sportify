@@ -1,0 +1,87 @@
+/* General styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1.cri-head {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5em;
+  color: rgb(20, 111, 20);
+}
+
+/* Card styles */
+.images-set1, .images-set2 {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.card1, .card2, .card3, .card4, .card5, .card6 {
+  position: relative;
+  width: 330px;
+  height: 370px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover, .card6:hover {
+  transform: scale(1.05);
+}
+
+.card1 img, .card2 img, .card3 img, .card4 img, .card5 img, .card6 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rating and Review styles */
+.rat-rev-1, .rat-rev-2, .rat-rev-3, .rat-rev-4, .rat-rev-5, .rat-rev-6 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rat-rev1, .rat-rev2, .rat-rev3, .rat-rev4, .rat-rev5, .rat-rev6 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.rat1, .rat2, .rat3, .rat4, .rat5, .rat6 {
+  font-size: 1.2em;
+  color: rgb(217, 51, 107);
+  margin-left: 50px;
+}
+
+.rev1, .rev2, .rev3, .rev4, .rev5, .rev6 {
+  font-size: 1em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .images-set1, .images-set2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    width: 90%;
+    height: auto;
+  }
+}

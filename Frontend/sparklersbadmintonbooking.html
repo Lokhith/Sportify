@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking page</title>
+  <link rel="stylesheet" href="bookingpage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+  <div class="name">
+    <h3 class="turf-name">Sparklers Badminton Court</h3>
+    <div id="dates-list">
+      <!-- Dates of the week will be populated here -->
+    </div>
+  </div>
+  <br>
+  <script>
+    // Function to get the next 7 days
+    function getNext7Days() {
+      const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const monthsOfYear = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const datesList = [];
+      for (let i = 0; i < 7; i++) {
+        const date = new Date();
+        date.setDate(date.getDate() + i);
+        const day = daysOfWeek[date.getDay()];
+        const month = monthsOfYear[date.getMonth()];
+        const dateString = `${day}, ${month} ${date.getDate()}`;
+        datesList.push({ dateString, date });
+      }
+      return datesList;
+    }
+
+    // Populate the dates list
+    const datesList = getNext7Days();
+    const datesListElement = document.getElementById('dates-list');
+    datesList.forEach(({ dateString, date }) => {
+      const button = document.createElement('button');
+      button.innerText = dateString;
+      button.setAttribute('data-date', date.toISOString());
+      button.addEventListener('click', function () {
+        // Remove 'selected' class from all buttons
+        document.querySelectorAll('#dates-list button').forEach(btn => btn.classList.remove('selected'));
+        // Add 'selected' class to the clicked button
+        button.classList.add('selected');
+      });
+      datesListElement.appendChild(button);
+    });
+  </script>
+
+  <div class="slots">
+    <h3 style="text-align: center;">Morning Slots</h3><br>
+    <div class="slot-buttons" id="morning-slots">
+      <!-- Morning slot buttons will be populated here -->
+    </div>
+
+    <h3 style="text-align: center;">Afternoon Slots</h3><br>
+    <div class="slot-buttons" id="afternoon-slots">
+      <!-- Afternoon slot buttons will be populated here -->
+    </div>
+
+    <h3 style="text-align: center;">Evening Slots</h3><br>
+    <div class="slot-buttons" id="evening-slots">
+      <!-- Evening slot buttons will be populated here -->
+    </div>
+
+    <h3 style="text-align: center;">Night Slots</h3><br>
+    <div class="slot-buttons" id="night-slots">
+      <!-- Night slot buttons will be populated here -->
+    </div>
+  </div>
+
+  <div class="payment" id="payment-section">
+    <h3>Total Payment: <span id="total-payment">0</span></h3>
+    <button id="proceed-button">Proceed</button>
+  </div>
+
+  <script>
+    // Function to create slot buttons
+    function createSlotButtons(containerId, startHour, endHour) {
+      const container = document.getElementById(containerId);
+      for (let hour = startHour; hour < endHour; hour++) {
+        const button = document.createElement('button');
+        const nextHour = (hour + 1) % 24;
+        const displayHour = hour % 12 === 0 ? 12 : hour % 12;
+        const displayNextHour = nextHour % 12 === 0 ? 12 : nextHour % 12;
+        const period = hour < 12 ? 'am' : 'pm';
+        const nextPeriod = nextHour < 12 ? 'am' : 'pm';
+        button.innerText = `${displayHour}:00${period} - ${displayNextHour}:00${nextPeriod}`;
+        button.addEventListener('click', function () {
+          button.classList.toggle('selected');
+          updatePayment();
+        });
+        button.classList.add('large-button');
+        container.appendChild(button);
+      }
+    }
+
+    // Function to update payment
+    function updatePayment() {
+      const selectedSlots = document.querySelectorAll('.slot-buttons button.selected');
+      const paymentPerSlot = 1000; // Example payment per slot
+      const totalPayment = selectedSlots.length * paymentPerSlot;
+      document.getElementById('total-payment').innerText = totalPayment;
+    }
+
+    // Create slot buttons
+    createSlotButtons('morning-slots', 6, 12);
+    createSlotButtons('afternoon-slots', 12, 16);
+    createSlotButtons('evening-slots', 16, 22);
+    createSlotButtons('night-slots', 22, 30); // 30 to cover up to 6am next day
+
+    // Sticky payment section at the bottom of the screen
+    window.addEventListener('scroll', function() {
+      const paymentSection = document.getElementById('payment-section');
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const bodyHeight = document.body.clientHeight;
+
+      if (scrollY + windowHeight >= bodyHeight) {
+        paymentSection.classList.remove('sticky');
+      } else {
+        paymentSection.classList.add('sticky');
+      }
+    });
+  </script>
+</body>
+</html>

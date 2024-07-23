@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="offers.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <div>
+    <div id="header-placeholder"></div>
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
+    <div class="offer-section">
+      <div class = "offer-search">
+        <input type = "text" id = "search" placeholder="Search for Offers">
+        <button class = "search-icon">
+          <i class = "fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class = "cards" id = "card-offers">
+        <div class = "card-box">
+          <img src = "offersimg/offer1.jpg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">SBI Card</p>
+          <p class = "card-info">Get upto 20% off on all SBI cards</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer2.jpg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">HDFC Card</p>
+          <p class = "card-info">Get instant cashback upto 50% off on selected HDFC cards</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer3.jpeg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">ICICI Card</p>
+          <p class = "card-info">Get upto 25% off on ICICI Debit cards</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer4.png" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">Amazon Pay</p>
+          <p class = "card-info">Get instant discount upto 30% by using Amazon Pay</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer5.jpeg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">Slice</p>
+          <p class = "card-info">Use Slice and avail instant discount upto Rs500/-</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer6.jpeg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">Yes Bank</p>
+          <p class = "card-info">Get instant discount upto 30% by using Yes Bank Credit Cards</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer7.jpeg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">Axis Bank</p>
+          <p class = "card-info">Get a Flipkart E-Voucher worth upto Rs500/-</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer8.jpeg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">RBL Bank</p>
+          <p class = "card-info">Get instant discount upto Rs450/- by using RBL Debit and Credit Cards</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer9.jpeg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">Federal Bank</p>
+          <p class = "card-info">Get instant discount upto Rs100/- by using Federal Debit and Credit Cards</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer10.jpg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">Canara Bank</p>
+          <p class = "card-info">Use Canara Bank Credit Cards and get cashback upto Rs230/-</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer11.png" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">IFB Bank</p>
+          <p class = "card-info">Book using IFB and get a voucher worth Rs300/-</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer12.png" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">Google Pay</p>
+          <p class = "card-info">Pay using Google Pay and get a stratch card worth upto Rs250/-</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer13.jpg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">Paytm Wallet</p>
+          <p class = "card-info">Pay using Paytm Wallet and get upto Rs300 cashback</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer14.jpeg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">DBS Bank</p>
+          <p class = "card-info">Get flat discount of 10% on bookings above Rs1000/-</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer15.jpg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">Citi Bank</p>
+          <p class = "card-info">Pay using Citi Bank Credit and Debit Cards and avail cashback upto 12%</p>
+        </div>
+        <div class = "card-box">
+          <img src = "offersimg/offer16.jpeg" alt = "" height = "350px" width = "250px">
+          <p style = "font-weight: bold;">Simpl Pay</p>
+          <p class = "card-info">Use Simpl Pay to book now and pay the money later</p>
+        </div>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src = "offers.js"></script>
+  </body>
+</html>

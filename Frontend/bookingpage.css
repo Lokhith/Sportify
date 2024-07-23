@@ -1,0 +1,106 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.name {
+  margin-right:750px;
+  margin-top: 20px;
+  
+}
+
+.turf-name{
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 26px;
+}
+
+#dates-list {
+  display: flex;
+  justify-content:flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+button {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 95px; /* Adjust width to fit 7 buttons in one row */
+  text-align: center;
+}
+
+button.selected {
+  background-color: orange;
+  color: white;
+  border-color: orange;
+}
+
+.slots {
+  margin-right: 750px;
+  padding-top: 20px;
+  margin-bottom: 58px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+
+.slot-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.large-button {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px; /* Increased padding for larger buttons */
+  font-size: 15px; /* Increased font size */
+  cursor: pointer;
+  width: 98%; /* Make buttons expand to fill their containers */
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Add some bottom margin between buttons */
+}
+
+
+.payment {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.payment h3 {
+  display: inline-block;
+  margin-right: 452px;
+  font-size: 20px;
+}
+
+#proceed-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: orange;
+  color: white;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}

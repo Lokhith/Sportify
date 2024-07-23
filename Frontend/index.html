@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportify</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  
+  <link rel = "stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <script>
+    fetch('header.html')  
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+  <div id="header-placeholder"></div>
+
+  
+  <div class = "slides">
+    <div class = "slide slide-1">
+      <img src = "images/cricket.jpeg" alt="">
+    </div>
+    <div class = "slide slide-2">  
+      <img src = "images/football.jpg" alt="">
+    </div>
+    <div class = "slide slide-3">  
+      <img src = "images/badminton.png" alt="">    
+    </div>
+  </div>
+  <h2 class = "heading-rec">Recommended Turfs and Courts</h2>
+  <div class = "rec-images-1">
+    <a href="playarenabookingpage.html"><img class = "image1" src = "Rec/rec2.jpeg" alt="" height="250px" width="300px"></a>                  
+    <a href="sachincricketbooking.html"><img class = "image2" src = "Rec/rec1.jpeg" alt="" height="250px" width="300px"></a>
+    <a href="kingsleycricketbooking.html"><img class = "image3" src = "Rec/rec3.jpeg" alt="" height="250px" width="300px"></a>
+    <a href="shreyabadmintonbooking.html"><img class = "image4" src = "Rec/rec4.jpeg" alt="" height="250px" width="300px"></a>
+  </div>
+  <div class = "rec-name-1">
+    <h3 class = "a1">Play Arena</h3>
+    <h3 class = "a2">Sachin Cricket Turf</h3>
+    <h3 class = "a3">Kingsley Cricket Turf</h3>
+    <h3 class = "a4">Shreya Badminton Court</h3>
+  </div>
+  <div class = "rec-images-2">
+    <a href="reshmifootballbooking.html"><img class = "image5" src = "Rec/rec5.jpeg" alt="" height="250px" width="300px"></a>
+    <a href="vijaybadmintonbooking.html"><img class = "image6" src = "Rec/rec6.jpeg" alt="" height="250px" width="300px"></a>
+    <a href="rameshcricketbooking.html"><img class = "image7" src = "Rec/rec7.jpeg" alt="" height="250px" width="300px"></a>
+    <a href="sparklersbadmintonbooking.html"><img class = "image8" src = "Rec/rec8.jpeg" alt="" height="250px" width="300px"></a>
+  </div>
+  <div class = "rec-name-2">
+    <h3 class = "a5">Reshmi Football Turf</h3>
+    <h3 class = "a6">Vijay Badminton Court</h3>
+    <h3 class = "a7">Ramesh Cricket Turf</h3>
+    <h3 class = "a8">Sparklers Badminton Court</h3>
+  </div>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

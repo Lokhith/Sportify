@@ -1,0 +1,88 @@
+.title{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+.list-images-1{
+  margin-right:300px;
+  margin-left:300px;
+  margin-top: 30px; 
+  padding: 5px;
+  display:flex;
+  justify-content: space-between;
+  background-color: rgb(213, 213, 213);
+}
+
+.image1, .image2, .image3{
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.list-images-1 img:hover{
+  transform: scale(1.03);
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.list-name-1{
+  display:flex;
+  margin-top:10px;
+}
+
+.a1{
+  margin-left: 246px;
+}
+
+.a2{
+  margin-left: -30px;
+}
+
+.a3{
+  margin-left: -20px;
+}
+
+.service{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 160px;
+}
+
+.service-images-1{
+  margin-right:200px;
+  margin-left:200px;
+  margin-top: 60px; 
+  padding: 5px;
+  display:flex;
+  text-align: center;
+  justify-content: space-between;
+  column-gap: 40px;
+}
+
+.image1, .image2, .image3{
+  border-radius: 10px;
+}
+
+.service-images-2{
+  margin-right:200px;
+  margin-left:200px;
+  margin-top: 30px; 
+  padding: 5px;
+  display:flex;
+  text-align: center;
+  justify-content: space-between;
+  column-gap: 40px;
+  margin-bottom: 160px;
+}
+
+.image4, .image5, .image6{
+  border-radius: 10px;
+}
+.image5{
+  margin-left: -150px;
+}
+
+.image6{
+  margin-left: -150px;
+}
+

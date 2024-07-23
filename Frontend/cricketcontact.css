@@ -1,0 +1,70 @@
+.form {
+  flex: 0.7;
+  margin: 0 80px;
+  text-align: center;
+
+}
+
+.form input{
+  width: 20%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-color: black;
+  border: 1px solid black;
+}
+
+.name{
+  text-align: center;
+  margin-left:-228px;
+  margin-bottom: 5px;
+}
+
+.mobile-no{
+  text-align: center;
+  margin-left:-196px;
+  margin-bottom: 5px;
+}
+
+.email{
+  text-align: center;
+  margin-left:-233px;
+  margin-bottom: 5px;
+}
+
+.loca{
+  text-align: center;
+  margin-left:-212px;
+  margin-bottom: 5px;
+}
+
+.locality{
+  font-size: 16px;
+  border-radius: 0px;
+  margin-left: -1px;
+  padding: 6px;
+  padding-right: 134px;
+}
+
+.timing-option{
+  text-align: center;
+  margin-left:-97px;
+  margin-bottom: 5px;
+}
+
+.contact-time{
+  font-size: 16px;
+  border-radius: 0px;
+  margin-left: 0px;
+  padding: 6px;
+  padding-right: 115px;
+}
+
+.submit-btn{
+  text-align: center;
+  margin-bottom: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+  

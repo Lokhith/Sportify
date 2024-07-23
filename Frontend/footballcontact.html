@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cricketcontact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script><br><br>
+    <h2 style="text-align: center;">List your Football Turf within 2 minutes</h2><br><br>
+    <div class="form">
+      <p class="name">Name</p>
+      <input type="text" id="name" placeholder="Enter your Name"><br><br>
+      <p class="mobile-no">Mobile no. </p>
+      <input type="text" id="mobile" placeholder="Enter your Mobile no."><br><br>
+      <p class="email">Email </p>
+      <input type="text" id="email" placeholder="Enter your Email"><br><br>
+      <p class="loca">Location</p>
+      <select id="location" class="locality">
+        <option value="">Select Location</option>
+        <option>Coimbatore</option>
+        <option>Chennai</option>
+        <option>Bangalore</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+        <option>Other</option>
+      </select><br><br>
+      <p class="timing-option">Preferred Contact Time</p>
+      <select id="contact-time" class="contact-time">
+        <option value="">Select Time</option>
+        <option>10:00am - 6:00pm</option>
+        <option>8:00am - 8:00pm</option>
+        <option>Any time</option>
+      </select><br><br><br>
+      <button class="submit-btn" onclick="handleSubmit()">Submit</button>
+      <div id="message" style="margin-top: 20px; text-align: center;"></div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+  </script>
+  <script src = "cricketcontact.js"></script>
+</body>
+</html>

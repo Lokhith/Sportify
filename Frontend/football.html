@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cricket.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
+    <h1 class="cri-head">Find Your Perfect Football Turf</h1>
+    <div class="images-set1">
+      <div class="card1">
+        <a href="cricketturfbook.html"><img src="football/fo1.jpeg" height="370px" width="330px" /></a>
+        <div class="rat-rev-1">
+          <ul class="rat-rev1">
+            <li class="rat1"><i class="fa-solid fa-star"></i>&nbsp;&nbsp;&nbsp;</li>
+            <p class="rev1">9.5/10&nbsp;&nbsp;&nbsp;&nbsp;2.9K&nbsp; Ratings</p>
+          </ul>
+        </div>
+      </div>
+      <div class="card2">
+        <a href="cricketturfbook.html"><img src="football/fo2.jpeg" height="370px" width="330px" /></a>
+        <div class="rat-rev-2">
+          <ul class="rat-rev2">
+            <li class="rat2"><i class="fa-solid fa-star"></i>&nbsp;&nbsp;&nbsp;</li>
+            <p class="rev2">9.2/10&nbsp;&nbsp;&nbsp;&nbsp;1.4K&nbsp; Ratings</p>
+          </ul>
+        </div>
+      </div>
+      <div class="card3">
+        <a href="cricketturfbook.html"><img src="football/fo3.jpeg" height="370px" width="330px" /></a>
+        <div class="rat-rev-3">
+          <ul class="rat-rev3">
+            <li class="rat3"><i class="fa-solid fa-star"></i>&nbsp;&nbsp;&nbsp;</li>
+            <p class="rev3">8.6/10&nbsp;&nbsp;&nbsp;&nbsp;1.9K&nbsp; Ratings</p>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="images-set2">
+      <div class="card4">
+        <a href="cricketturfbook.html"><img src="football/fo4.jpeg" height="370px" width="330px" /></a>
+        <div class="rat-rev-4">
+          <ul class="rat-rev4">
+            <li class="rat4"><i class="fa-solid fa-star"></i>&nbsp;&nbsp;&nbsp;</li>
+            <p class="rev4">8.5/10&nbsp;&nbsp;&nbsp;&nbsp;2.6K&nbsp; Ratings</p>
+          </ul>
+        </div>
+      </div>
+      <div class="card5">
+        <a href="cricketturfbook.html"><img src="football/fo5.jpeg" height="370px" width="330px" /></a>
+        <div class="rat-rev-5">
+          <ul class="rat-rev5">
+            <li class="rat5"><i class="fa-solid fa-star"></i>&nbsp;&nbsp;&nbsp;</li>
+            <p class="rev5">7.9/10&nbsp;&nbsp;&nbsp;&nbsp;3.4K&nbsp; Ratings</p>
+          </ul>
+        </div>
+      </div>
+      <div class="card6">
+        <a href="cricketturfbook.html"><img src="football/fo6.jpeg" height="370px" width="330px" /></a>
+        <div class="rat-rev-6">
+          <ul class="rat-rev6">
+            <li class="rat6"><i class="fa-solid fa-star"></i>&nbsp;&nbsp;&nbsp;</li>
+            <p class="rev6">7.3/10&nbsp;&nbsp;&nbsp;&nbsp;1.6K&nbsp; Ratings</p>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

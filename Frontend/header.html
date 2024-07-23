@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Sportify</title>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">Sportify</div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for Cricket and Football Turf">
+        <div class="search-icon">
+          <button class="search-icons">
+            <i class="fa-solid fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="location-signin">
+        <select class="location">
+          <option>Coimbatore</option>
+          <option>Chennai</option>
+          <option>Bangalore</option>
+          <option>Delhi</option>
+          <option>Mumbai</option>
+        </select>
+        <button class="signin"><a href="login.html">Sign In</a></button>
+        <div class="side-navbar-toggle" onclick="openNavbar()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="navbar">
+    <div class="navbar-links">
+      <p class="navbar-link"><a href="index.html">Home</a></p>
+      <p class="navbar-link"><a href="cricket.html">Cricket</a></p>
+      <p class="navbar-link"><a href="football.html">Football</a></p>
+      <p class="navbar-link"><a href="badminton.html">Badminton</a></p>
+      <p class="navbar-link-rightone"><a href="offers.html">Offers</a></p>
+      <p class="navbar-link-righttwo"><a href="Listyourarena.html">List Your Arena</a></p>
+    </div>
+  </nav>
+  <div id="side-navbar" class="side-navbar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNavbar()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="cricket.html">Cricket</a>
+    <a href="football.html">Football</a>
+    <a href="badminton.html">Badminton</a>
+    <a href="offers.html">Offers</a>
+    <a href="Listyourarena.html">List Your Arena</a>
+  </div>
+  <script src="header.js"></script>
+</body>
+</html>
